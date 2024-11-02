@@ -14,10 +14,14 @@ export default function SingleCard({
   return (
     <div className="card">
       <div className={flipped ? "flipped" : ""}>
-        <img className="front" src={card.src} alt="card front" />
+        <img
+          className="front"
+          src={import.meta.env.BASE_URL + card.src}
+          alt="card front"
+        />
         <img
           className="back"
-          src="/src/assets/cover.png"
+          src={import.meta.env.BASE_URL + "/assets/cover.png"}
           alt="card back"
           onClick={handleChoice}
         />
